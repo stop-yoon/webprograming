@@ -1,73 +1,100 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>회원 가입</title>
+        <style>
+        label {
+            display: inline-block;
+            width: 130px;
+            text-align: right;
+            margin-left: 8px;
+            padding-right: 8px;
+        }
+
+        span.required {
+            color: red;
+        }
+
+        div.section {
+            background-color: lightblue;
+            width: 800px;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+
+        div.center {
+            text-align: center;
+            margin-left: 200px;
+        }
+    </style>
 </head>
 <body>
 <h3>취업 정보 계정 만들기</h3>
-<p>* 필수 입력 항목</p>
+<p style="color:red; font-size:10px;">* 필수 입력 항목</p>
 
-<p>기본 정보</p>
-<form>
-    <label for="name" style="display:inline-block;">이 름*</label>
+<div class="section">기본 정보</div>
+<form action="https://stop-yoon.github.io/webprograming/">
+    <label for="name" class="label">이 름<span class="required">*</span></label>
     <input type="text" id="name" name="name" size="8" required><br>
 
-    <label for="email">이메일*</label>
+    <label for="email" class="label">이메일<span class="required">*</span></label>
     <input type="email" id="email" name="email" size="15" placeholder="예: id@domain_name" required><br>
 
-    <label for="password">암호*</label>
+    <label for="password" class="label">암호<span class="required">*</span></label>
     <input type="password" id="password" name="password" size="12" required><br>
 
-    <label for="confirmPassword">암호 확인*</label>
+    <label for="confirmPassword" class="label">암호 확인<span class="required">*</span></label>
     <input type="password" id="confirmPassword" name="confirmPassword" size="12" required><br>
 
-    <label for="mobile">모바일 폰*</label>
+    <label for="mobile" class="label">모바일 폰<span class="required">*</span></label>
     <input type="tel" id="mobile" name="mobile" size="13" placeholder="예: 010-0000-0000" required><br>
 
-    <label for="homepage">개인 홈페이지</label>
+    <label for="homepage" class="label">개인 홈페이지</label>
     <input type="url" id="homepage" name="homepage" size="30" placeholder="예: http://"><br>
 
-    <label for="address">주소*</label>
+    <label for="address" class="label">주소<span class="required">*</span></label>
     <textarea id="address" name="address" size="30" required></textarea><br>
 
-    <p>학 력</p>
-    <label for="school">학교 명*</label>
+    <div class="section">학 력</div>
+    <label for="school" class="label">학교 명<span class="required">*</span></label>
     <input type="text" id="school" name="school" size="12" required><br>
 
-    <label for="major">전 공*</label>
+    <label for="major" class="label">전 공<span class="required">*</span></label>
     <input type="text" id="major" name="major" size="12" required><br>
 
-    <label for="graduationStatus">졸업 여부*</label>
+    <label for="graduationStatus" class="label">졸업 여부<span class="required">*</span></label>
     <select id="graduationStatus" name="graduationStatus" required>
         <option value="">---선택---</option>
         <option value="expected">졸업예정</option>
         <option value="graduated">졸업</option>
     </select><br>
 
-    <label for="graduationDate">졸업 (예정)일</label>
+    <label for="graduationDate" class="label">졸업 (예정)일</label>
     <input type="date" id="graduationDate" name="graduationDate" required><br>
 
-    <p>업무 경력</p>
-    <label for="workplace">근무업체명</label>
+    <div class="section">업무 경력</div>
+    <label for="workplace" class="label">근무업체명</label>
     <input type="text" id="workplace" name="workplace" size="20" required><br>
 
-    <label for="position">직위</label>
+    <label for="position" class="label">직위</label>
     <input type="text" id="position" name="position" size="10" required><br>
 
-    <label for="tasks">담당 업무</label>
+    <label for="tasks" class="label">담당 업무</label>
     <textarea id="tasks" name="tasks" rows="10" cols="80" placeholder="이전 업체에서 담당한 업무를 기술하시오." required></textarea><br>
 
-    <label for="workYears">근무 년수</label>
+    <label for="workYears" class="label">근무 년수</label>
     <input type="number" id="workYears" name="workYears" min="0" max="10" step="0.5" required><span class="years-label">년</span><br>
-    <p>자기소개서</p>
+
+    <div class="section">자기소개서</div>
     <label for="attachment">첨부 파일</label>
     <input type="file" id="attachment" name="attachment"><br>
 
- <div style="text-align: center;">
-        <input type="submit" value="제출">
-        <input type="reset" value="재작성">
-    </div>
+<div class="center">
+    <input type="submit" value="제출">
+    <input type="reset" value="재작성">
+</div>
+
 </form>
 
 </body>
